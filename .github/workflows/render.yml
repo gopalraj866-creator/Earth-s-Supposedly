@@ -1,0 +1,150 @@
+name: Render video
+
+# Run it from the Actions tab: "Run workflow" -> choose quality.
+on:
+  workflow_dispatch:
+    inputs:
+      quality:
+        description: "What to render"
+        type: choice
+        default: "1080p"
+        options: ["1080p", "4k", "shorts", "all"]
+      tts:
+        description: "Narration engine (auto = Microsoft neural voice, falls back to Kokoro, then silent)"
+        type: choice
+        default: "auto"
+        options: ["auto", "edge", "kokoro", "estimate"]
+      voice:
+        description: "edge-tts voice name"
+        type: string
+        default: "en-US-AndrewMultilingualNeural"
+      publish_release:
+        description: "Also attach the final files to a GitHub Release"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  # ------------------------------------------------------------------ 1. narration, subtitles, soundtrack, plan
+  prepare:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      formats: ${{ steps.plan.outputs.formats }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - name: System packages
+        run: sudo apt-get update -y && sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-liberation && (sudo apt-get install -y fonts-inter || true)
+      - name: Python packages
+        run: pip install numpy scipy edge-tts kokoro-onnx
+      - name: Narration + timeline + SRT (long)
+        if: inputs.quality != 'shorts'
+        env: { TTS: "${{ inputs.tts }}", VOICE: "${{ inputs.voice }}" }
+        run: python3 scripts/build_timeline.py --format long --engine "$TTS" --voice "$VOICE"
+      - name: Narration + timeline + SRT (short)
+        if: inputs.quality == 'shorts' || inputs.quality == 'all'
+        env: { TTS: "${{ inputs.tts }}", VOICE: "${{ inputs.voice }}" }
+        run: python3 scripts/build_timeline.py --format short --engine "$TTS" --voice "$VOICE"
+      - name: YouTube metadata (chapters, description)
+        if: inputs.quality != 'shorts'
+        run: python3 scripts/make_metadata.py
+      - name: Mix soundtrack
+        run: |
+          set -e
+          if [ -d out/long ];  then python3 scripts/build_audio.py --format long;  fi
+          if [ -d out/short ]; then python3 scripts/build_audio.py --format short; fi
+      - name: Plan render matrix
+        id: plan
+        run: python3 scripts/plan_chunks.py --quality ${{ inputs.quality }}
+      - name: Drop temporary TTS files
+        run: rm -rf out/*/tts out/_probe.wav out/models
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prepared
+          path: out
+          retention-days: 7
+
+  # ------------------------------------------------------------------ 2. render every chunk in parallel (Three.js + headless Chrome)
+  render:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix: ${{ fromJSON(needs.prepare.outputs.matrix) }}
+    name: render ${{ matrix.name }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22, cache: npm }
+      - name: System packages
+        run: sudo apt-get update -y && sudo apt-get install -y ffmpeg fonts-dejavu-core fonts-liberation && (sudo apt-get install -y fonts-inter || true)
+      - run: npm ci --no-audit --no-fund
+      - uses: actions/download-artifact@v4
+        with: { name: prepared, path: out }
+      - name: Render ${{ matrix.profile }} ${{ matrix.start }}s - ${{ matrix.end }}s
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: |
+          node scripts/render_chunk.mjs \
+            --timeline out/${{ matrix.format }}/timeline.json \
+            --profile ${{ matrix.profile }} \
+            --start ${{ matrix.start }} --end ${{ matrix.end }} \
+            --out chunks/${{ matrix.name }}.mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: chunk-${{ matrix.name }}
+          path: chunks/${{ matrix.name }}.mp4
+          retention-days: 3
+          compression-level: 0
+
+  # ------------------------------------------------------------------ 3. stitch + mux + publish
+  assemble:
+    needs: [prepare, render]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: System packages
+        run: sudo apt-get update -y && sudo apt-get install -y ffmpeg
+      - uses: actions/download-artifact@v4
+        with: { name: prepared, path: out }
+      - uses: actions/download-artifact@v4
+        with: { pattern: "chunk-*", path: chunks, merge-multiple: true }
+      - name: Assemble
+        run: |
+          mkdir -p final
+          for prof in 1080p 4k short; do
+            ls chunks/$prof-*.mp4 >/dev/null 2>&1 || continue
+            fmt=long; [ "$prof" = short ] && fmt=short
+            name=radiation-barrier_$prof; [ "$prof" = short ] && name=radiation-barrier_shorts_9x16
+            python3 scripts/assemble.py --format $fmt --profile $prof --chunks chunks --out final/$name.mp4
+          done
+          for fmt in long short; do
+            [ -d out/$fmt ] || continue
+            tag=$fmt; [ "$fmt" = short ] && tag=shorts
+            cp out/$fmt/subtitles.srt final/radiation-barrier_$tag.srt
+            cp out/$fmt/audio.m4a    final/radiation-barrier_$tag-audio.m4a
+            cp out/$fmt/mix.wav      final/radiation-barrier_$tag-audio-master.wav
+            cp out/$fmt/narration_only.mp3 final/radiation-barrier_$tag-narration.mp3
+          done
+          cp out/long/youtube_metadata.md final/ 2>/dev/null || true
+          ls -lh final
+      - uses: actions/upload-artifact@v4
+        with:
+          name: final-video-and-audio
+          path: final
+          retention-days: 30
+          compression-level: 0
+      - name: GitHub Release
+        if: inputs.publish_release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: render-${{ github.run_number }}
+          name: Render ${{ github.run_number }} (${{ inputs.quality }})
+          files: final/*

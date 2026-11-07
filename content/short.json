@@ -1,0 +1,47 @@
+{
+  "format": "short",
+  "title": "Earth's Impenetrable Radiation Barrier Was Breached",
+  "target_seconds": 52,
+  "lead_in": 0.3,
+  "tail": 1.6,
+  "chapter_gap": 0.25,
+  "chapters": [
+    {
+      "id": "hook", "title": "EARTH HAS AN INVISIBLE WALL", "subtitle": "", "energy": 0.6,
+      "sentences": [
+        { "text": "Earth has an invisible wall that scientists said nothing could cross.", "mark": "barrier_named" },
+        { "text": "Then in 2024, the Sun proved them wrong.", "mark": "sun_hit" }
+      ]
+    },
+    {
+      "id": "barrier", "title": "THE IMPENETRABLE BARRIER", "subtitle": "", "energy": 0.5,
+      "sentences": [
+        { "text": "Giant belts of charged particles surround our planet." },
+        { "text": "Deadly killer electrons stopped at a razor sharp edge, three Earth radii out.", "mark": "barrier_on", "callout": { "kind": "stat", "text": "≈ 3 EARTH RADII", "sub": "" } },
+        { "text": "Scientists called it the impenetrable barrier." }
+      ]
+    },
+    {
+      "id": "storm", "title": "G5 SUPERSTORM", "subtitle": "", "energy": 0.85,
+      "sentences": [
+        { "text": "In May 2024, a G5 superstorm hit Earth.", "mark": "cme_hit", "callout": { "kind": "stat", "text": "G5", "sub": "" } },
+        { "text": "It crushed our protective plasma cloud, and let strange waves that sound like birdsong take over.", "mark": "plasma_crush" }
+      ]
+    },
+    {
+      "id": "breach", "title": "THE BREACH", "subtitle": "", "energy": 0.95,
+      "sentences": [
+        { "text": "Japan's Arase satellite watched electrons inside the barrier get accelerated to millions of electron volts.", "mark": "chorus_on" },
+        { "text": "Five thousand times more than before.", "mark": "x5000", "callout": { "kind": "stat", "text": "5,000×", "sub": "" } },
+        { "text": "The wall was breached from within.", "mark": "from_within" }
+      ]
+    },
+    {
+      "id": "outro", "title": "FOLLOW FOR MORE SPACE SCIENCE", "subtitle": "", "energy": 0.4,
+      "sentences": [
+        { "text": "The extra radiation lasted for months, and it changes how we protect satellites and astronauts." },
+        { "text": "Follow for more space science!", "mark": "cta" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Radiation barrier simulation</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; background: #000; overflow: hidden; }
+  canvas#gl { position: absolute; left: 0; top: 0; display: block; }
+  #hud { position: absolute; inset: 0; pointer-events: none; font-family: Inter, "Segoe UI", "DejaVu Sans", "Liberation Sans", Arial, sans-serif; color: #fff; }
+</style>
+<script type="importmap">
+{ "imports": { "three": "/node_modules/three/build/three.module.js" } }
+</script>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<div id="hud"></div>
+<script type="module" src="/web/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "radiation-barrier-video",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Three.js simulation + automated render pipeline for the video: Earth's Supposedly Impenetrable Radiation Barrier Has Been Breached",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/selftest.mjs",
+    "timeline:long": "python3 scripts/build_timeline.py --format long",
+    "timeline:short": "python3 scripts/build_timeline.py --format short",
+    "audio:long": "python3 scripts/build_audio.py --format long",
+    "audio:short": "python3 scripts/build_audio.py --format short",
+    "still": "node scripts/still.mjs",
+    "preview": "node scripts/render_chunk.mjs --timeline out/short/timeline.json --profile short --scale 0.25 --start 0 --end 8 --out out/preview.mp4"
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.0.0",
+    "three": "^0.180.0"
+  }
+}

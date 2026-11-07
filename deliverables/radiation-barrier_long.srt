@@ -1,0 +1,544 @@
+1
+00:00:01,500 --> 00:00:02,902
+For more than a decade,
+
+2
+00:00:02,922 --> 00:00:07,487
+scientists believed there was a wall
+around Earth that nothing could cross.
+
+3
+00:00:07,667 --> 00:00:13,121
+Not a wall of stone, or metal. A wall made
+of magnetism and invisible waves,
+
+4
+00:00:13,141 --> 00:00:16,790
+floating thousands of kilometers above
+your head.
+
+5
+00:00:16,970 --> 00:00:19,437
+They called it the impenetrable barrier.
+
+6
+00:00:19,617 --> 00:00:24,238
+And in May 2024, the Sun threw everything
+it had at it.
+
+7
+00:00:24,418 --> 00:00:27,806
+What happened next was recorded by a
+Japanese satellite,
+
+8
+00:00:27,826 --> 00:00:29,893
+and it has just been published.
+
+9
+00:00:30,073 --> 00:00:32,607
+Deadly, near light speed electrons
+appeared
+
+10
+00:00:32,627 --> 00:00:35,420
+exactly where they were never supposed to
+be.
+
+11
+00:00:35,600 --> 00:00:40,435
+Stay with me, because the way they got
+there is stranger than anyone expected.
+
+12
+00:00:41,215 --> 00:00:45,580
+To understand the breach, we first need to
+meet the Van Allen belts.
+
+13
+00:00:45,760 --> 00:00:47,897
+Earth is wrapped in two giant,
+
+14
+00:00:47,917 --> 00:00:51,377
+donut shaped regions of trapped charged
+particles,
+
+15
+00:00:51,397 --> 00:00:54,648
+held in place by our planet's magnetic
+field.
+
+16
+00:00:54,828 --> 00:00:57,367
+The inner belt is mostly protons,
+
+17
+00:00:57,387 --> 00:01:02,110
+many of them created when cosmic rays slam
+into our atmosphere.
+
+18
+00:01:02,130 --> 00:01:05,487
+It sits roughly 600 to 6,000 kilometers
+up.
+
+19
+00:01:05,667 --> 00:01:12,382
+The outer belt is mostly electrons,
+energized by processes driven by the Sun.
+
+20
+00:01:12,402 --> 00:01:18,032
+It stretches from about 13,500 kilometers
+out to around 60,000.
+
+21
+00:01:18,212 --> 00:01:22,428
+Between them lies a gap called the slot,
+usually almost empty.
+
+22
+00:01:23,208 --> 00:01:26,336
+Some of those electrons are the dangerous
+kind.
+
+23
+00:01:26,516 --> 00:01:30,684
+Scientists call them ultra-relativistic,
+or killer electrons,
+
+24
+00:01:30,704 --> 00:01:34,807
+because they are accelerated to nearly the
+speed of light.
+
+25
+00:01:34,987 --> 00:01:38,252
+Their energy is so high that they can
+punch through
+
+26
+00:01:38,272 --> 00:01:41,806
+satellite shielding and damage sensitive
+electronics.
+
+27
+00:01:41,986 --> 00:01:45,391
+Over time, that can shorten the life of a
+spacecraft.
+
+28
+00:01:45,571 --> 00:01:48,848
+They also raise the radiation risk for
+astronauts.
+
+29
+00:01:49,028 --> 00:01:52,467
+So where these particles can and cannot go
+decides
+
+30
+00:01:52,487 --> 00:01:56,273
+how we design and protect everything we
+put in orbit.
+
+31
+00:01:57,053 --> 00:02:02,741
+Then, in 2014, NASA's twin Van Allen
+Probes found something strange.
+
+32
+00:02:02,921 --> 00:02:07,290
+The most energetic electrons seemed to
+stop at a weirdly sharp edge,
+
+33
+00:02:07,310 --> 00:02:10,593
+about three Earth radii from the planet's
+center.
+
+34
+00:02:10,773 --> 00:02:14,840
+On one side, a swarm of them. On the
+other, almost nothing.
+
+35
+00:02:15,020 --> 00:02:19,283
+The team, led by Daniel Baker, published
+it in the journal Nature,
+
+36
+00:02:19,303 --> 00:02:22,927
+and gave it a dramatic name: the
+impenetrable barrier.
+
+37
+00:02:23,107 --> 00:02:27,824
+Their explanation was that the electrons
+drift inward extremely slowly,
+
+38
+00:02:27,844 --> 00:02:31,693
+while faint waves in the cloud of cold
+plasma around Earth
+
+39
+00:02:31,713 --> 00:02:35,302
+keep scattering them away, down into the
+atmosphere.
+
+40
+00:02:35,482 --> 00:02:40,295
+Together, those effects built what looked
+like an invisible glass wall in space.
+
+41
+00:02:41,075 --> 00:02:42,500
+But almost immediately,
+
+42
+00:02:42,520 --> 00:02:46,251
+other scientists started to doubt that it
+was a wall at all.
+
+43
+00:02:46,431 --> 00:02:51,266
+In 2018, a team proposed that the barrier
+might be an illusion.
+
+44
+00:02:51,446 --> 00:02:54,693
+Storms that push electrons inward, they
+argued,
+
+45
+00:02:54,713 --> 00:02:58,446
+usually die out before the electrons get
+much farther.
+
+46
+00:02:58,466 --> 00:03:02,617
+So the edge may only be where the storms
+run out of steam.
+
+47
+00:03:02,797 --> 00:03:04,619
+Then came another hint.
+
+48
+00:03:04,639 --> 00:03:10,683
+Researchers digging through observations
+from 1996 to 2006 found that lightning
+
+49
+00:03:10,703 --> 00:03:16,272
+generated radio waves can knock killer
+electrons out of the inner belt.
+
+50
+00:03:16,452 --> 00:03:19,237
+Which meant energetic electrons were
+already
+
+51
+00:03:19,257 --> 00:03:21,735
+living inside the supposed boundary.
+
+52
+00:03:21,915 --> 00:03:26,740
+Records from the huge Halloween storms of
+2003 even suggested that
+
+53
+00:03:26,760 --> 00:03:32,019
+extreme storms had once pushed energetic
+electrons deep into the slot.
+
+54
+00:03:32,199 --> 00:03:38,207
+But nobody had watched it happen with a
+modern satellite. Until May 2024.
+
+55
+00:03:38,987 --> 00:03:45,074
+May 2024. The Sun erupts in a series of
+flares and coronal mass ejections,
+
+56
+00:03:45,094 --> 00:03:50,990
+hurling billions of tons of magnetized
+plasma across the solar system.
+
+57
+00:03:51,170 --> 00:03:56,361
+A day or so later, the wave front slams
+into Earth's magnetic field,
+
+58
+00:03:56,381 --> 00:04:00,653
+and our planet experiences a level G5
+geomagnetic storm.
+
+59
+00:04:00,673 --> 00:04:03,322
+The strongest category there is.
+
+60
+00:04:03,502 --> 00:04:06,952
+It was the most powerful storm in about
+two decades.
+
+61
+00:04:06,972 --> 00:04:10,289
+Auroras danced as far south as Florida and
+Mexico,
+
+62
+00:04:10,309 --> 00:04:14,566
+and its effects were even recorded at the
+bottom of the ocean.
+
+63
+00:04:14,746 --> 00:04:18,660
+Up in space, the storm squeezed Earth's
+magnetic bubble,
+
+64
+00:04:18,680 --> 00:04:22,875
+and crushed the plasmasphere, that
+protective cloud of cold,
+
+65
+00:04:22,895 --> 00:04:25,895
+dense plasma, harder than ever recorded.
+
+66
+00:04:26,075 --> 00:04:31,294
+At the same time, the outer belt lost a
+huge share of its energetic electrons.
+
+67
+00:04:31,474 --> 00:04:36,885
+And in the middle of all this chaos, one
+Japanese spacecraft was working perfectly.
+
+68
+00:04:37,665 --> 00:04:42,516
+That spacecraft is Arase, launched by
+Japan's space agency,
+
+69
+00:04:42,536 --> 00:04:47,940
+JAXA, and it has been monitoring the
+radiation belts since 2017.
+
+70
+00:04:48,120 --> 00:04:53,627
+A team led by Yoshizumi Miyoshi at Nagoya
+University went through its data,
+
+71
+00:04:53,647 --> 00:04:56,347
+and saw something nobody expected.
+
+72
+00:04:56,527 --> 00:05:02,204
+Normally, that dense cloud of cold plasma
+damps out certain electromagnetic waves,
+
+73
+00:05:02,224 --> 00:05:04,498
+like a blanket over a speaker.
+
+74
+00:05:04,678 --> 00:05:09,175
+But the storm had stripped away much of
+the cloud. With the blanket gone,
+
+75
+00:05:09,195 --> 00:05:13,523
+a different kind of wave could thrive.
+They are called chorus waves.
+
+76
+00:05:13,703 --> 00:05:16,091
+Convert them to audio, says Miyoshi,
+
+77
+00:05:16,111 --> 00:05:20,202
+and they sound like birdsong. Rising
+chirps, again and again.
+
+78
+00:05:20,382 --> 00:05:26,066
+And in this thin, empty environment, those
+waves did not scatter the electrons away.
+
+79
+00:05:26,086 --> 00:05:29,936
+They did the opposite. They pushed them,
+again and again,
+
+80
+00:05:29,956 --> 00:05:34,625
+to enormous energies, right where the
+barrier was supposed to hold.
+
+81
+00:05:35,405 --> 00:05:37,402
+Here is what Arase measured.
+
+82
+00:05:37,582 --> 00:05:42,502
+During the recovery phase of the storm,
+electrons inside the barrier surged.
+
+83
+00:05:42,682 --> 00:05:45,904
+At energies around 3 million electron
+volts,
+
+84
+00:05:45,924 --> 00:05:51,570
+the flux ballooned by more than 5,000
+times compared with before the storm.
+
+85
+00:05:51,750 --> 00:05:56,833
+And the timing tells the story. Lower
+energy electrons showed up first.
+
+86
+00:05:56,853 --> 00:05:59,995
+About half a day later came higher
+energies.
+
+87
+00:06:00,015 --> 00:06:03,086
+And roughly a day after the first
+increase,
+
+88
+00:06:03,106 --> 00:06:07,251
+electrons above 3 million electron volts
+had surged too.
+
+89
+00:06:07,431 --> 00:06:11,214
+That staggered climb is the fingerprint of
+acceleration.
+
+90
+00:06:11,234 --> 00:06:16,788
+These electrons were not swept in from
+outside. They were energized on the spot.
+
+91
+00:06:16,968 --> 00:06:22,138
+The data also showed a distinct peak in
+the electron distribution right near
+
+92
+00:06:22,158 --> 00:06:27,605
+the old boundary, a pattern that is hard
+to explain by inward transport alone.
+
+93
+00:06:27,785 --> 00:06:32,257
+The wall was not broken from the outside.
+It was breached from within.
+
+94
+00:06:33,037 --> 00:06:38,145
+The extra radiation did not vanish
+quickly. It lingered for months,
+
+95
+00:06:38,165 --> 00:06:44,101
+and Arase watched it fade until another
+solar storm arrived in October 2024.
+
+96
+00:06:44,281 --> 00:06:49,706
+Separately, a small NASA CubeSat called
+CIRBE found that the same superstorm
+
+97
+00:06:49,726 --> 00:06:54,219
+carved two temporary new belts into the
+slot. One held protons,
+
+98
+00:06:54,239 --> 00:06:57,798
+something never seen before in a temporary
+belt.
+
+99
+00:06:57,978 --> 00:07:01,195
+Is any of this a danger to people on the
+ground?
+
+100
+00:07:01,215 --> 00:07:04,775
+No. The belts sit thousands of kilometers
+above us.
+
+101
+00:07:04,955 --> 00:07:08,458
+But for satellites and astronauts, it is a
+big deal.
+
+102
+00:07:08,478 --> 00:07:11,646
+It shows that a safe zone is not always
+safe.
+
+103
+00:07:11,826 --> 00:07:17,214
+Miyoshi says we need to understand how
+energetic electrons behave under extreme
+
+104
+00:07:17,234 --> 00:07:22,762
+space weather, to judge the radiation risk
+to spacecraft and improve forecasts.
+
+105
+00:07:23,542 --> 00:07:26,179
+So was the impenetrable barrier a myth?
+
+106
+00:07:26,359 --> 00:07:29,430
+Not exactly. Under normal conditions, it
+holds.
+
+107
+00:07:29,450 --> 00:07:32,850
+But Earth's shield turns out to be less
+like a wall,
+
+108
+00:07:32,870 --> 00:07:38,383
+and more like a living system, one that
+can change character in a matter of hours.
+
+109
+00:07:38,563 --> 00:07:42,408
+The Sun's activity rises and falls on an
+eleven year cycle,
+
+110
+00:07:42,428 --> 00:07:47,003
+and every big storm is a new experiment
+for the satellites watching.
+
+111
+00:07:47,183 --> 00:07:51,631
+If you enjoyed this journey into the
+invisible space above our heads,
+
+112
+00:07:51,651 --> 00:07:56,714
+hit subscribe, and tell me in the
+comments: what should we explore next?

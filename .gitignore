@@ -1,0 +1,9 @@
+node_modules/
+out/*/tts/
+out/models/
+out/_probe.wav
+out/qa/
+out/stills*/
+chunks/
+final/
+*.partial.mp4
